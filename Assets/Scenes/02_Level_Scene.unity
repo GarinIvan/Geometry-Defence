@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657892, g: 0.4964137, b: 0.57481635, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -444,13 +444,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98658945}
-  m_LocalRotation: {x: 0.38302222, y: -0.38302222, z: 0.17860618, w: 0.82139385}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -50, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!4 &116586266 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b226757d652fe50498dc27b8c2052faa,
@@ -1155,7 +1155,7 @@ PrefabInstance:
     - target: {fileID: 2134304502523546052, guid: 45544e5cd7eb89d41adb183ade468459,
         type: 3}
       propertyPath: _waves.Array.data[0]._waveSettings.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2134304502523546052, guid: 45544e5cd7eb89d41adb183ade468459,
         type: 3}
@@ -1177,6 +1177,18 @@ PrefabInstance:
       propertyPath: _waves.Array.data[4]._waveSettings.Array.size
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2134304502523546052, guid: 45544e5cd7eb89d41adb183ade468459,
+        type: 3}
+      propertyPath: _waves.Array.data[0]._waveSettings.Array.data[0]._enemy
+      value: 
+      objectReference: {fileID: 6006744843411739915, guid: d325e67c284f1824a865e35c16a4fd2a,
+        type: 3}
+    - target: {fileID: 2134304502523546052, guid: 45544e5cd7eb89d41adb183ade468459,
+        type: 3}
+      propertyPath: _waves.Array.data[0]._waveSettings.Array.data[2]._enemy
+      value: 
+      objectReference: {fileID: 5683823614208908460, guid: 22a7662b0382bf44cb56ec1a66fd5840,
+        type: 3}
     - target: {fileID: 2134304502523546052, guid: 45544e5cd7eb89d41adb183ade468459,
         type: 3}
       propertyPath: _waves.Array.data[2]._waveSettings.Array.data[0]._enemy
@@ -1379,6 +1391,16 @@ PrefabInstance:
         type: 3}
       propertyPath: _waves.Array.data[0]._waveSettings.Array.data[0]._spawnDelay
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134304502523546052, guid: 45544e5cd7eb89d41adb183ade468459,
+        type: 3}
+      propertyPath: _waves.Array.data[0]._waveSettings.Array.data[1]._spawnDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134304502523546052, guid: 45544e5cd7eb89d41adb183ade468459,
+        type: 3}
+      propertyPath: _waves.Array.data[0]._waveSettings.Array.data[2]._spawnDelay
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2134304502523546052, guid: 45544e5cd7eb89d41adb183ade468459,
         type: 3}
@@ -2648,12 +2670,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b226757d652fe50498dc27b8c2052faa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.62
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b226757d652fe50498dc27b8c2052faa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.05
+      value: 8.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b226757d652fe50498dc27b8c2052faa,
         type: 3}

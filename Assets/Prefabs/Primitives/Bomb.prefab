@@ -227,6 +227,7 @@ MonoBehaviour:
   explosionParticle: {fileID: 3486403941732717894, guid: ac811804713c31846a66500c9fd43332,
     type: 3}
   color: {fileID: 628203188500762509}
+  time: 10
 --- !u!1 &3259109423538260089
 GameObject:
   m_ObjectHideFlags: 0

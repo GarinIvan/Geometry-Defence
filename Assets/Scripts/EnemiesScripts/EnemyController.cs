@@ -6,10 +6,14 @@ public class EnemyController : MonoBehaviour
     public float originalSpeed = 0.075f;
     private float speed;
     public float damage = 5;
+    public float reload;
     private Building _targetBuilding;
+    private Animator _animator;
+    private static readonly int IsAttack = Animator.StringToHash("isAttack");
+
     void Start()
     {
-        RotateEnemy();
+        StartEnemy();
     }
     void FixedUpdate()
     {
@@ -23,31 +27,32 @@ public class EnemyController : MonoBehaviour
             if (building != null)
             {
                 _targetBuilding = building;
-                StartCoroutine(AttackBuilding());
+                _animator.SetBool(IsAttack, true);
+                speed = 0;
             }
         }
     }
-    private IEnumerator AttackBuilding()
+    public void AttackBuilding()
     {
-        while (_targetBuilding != null && _targetBuilding.health > 0 && _targetBuilding._renderer.material.color == _targetBuilding.colorMaterial)
+        if (_targetBuilding != null)
         {
-            speed = 0;
-            yield return new WaitForSeconds(1);
-            if (_targetBuilding != null)
-            {
-                _targetBuilding.TakeDamage(damage);
-            }
+            _targetBuilding.TakeDamage(damage);
         }
-        _targetBuilding = null;
-        speed = originalSpeed;
+        else
+        {
+            _targetBuilding = null;
+            _animator.SetBool(IsAttack, false);
+            speed = originalSpeed;
+        }
     }
     public void EnemyMove()
     {
         transform.position += transform.forward * speed * Time.fixedDeltaTime;
     }
-    public void RotateEnemy()
+    public void StartEnemy()
     {
         transform.rotation = Quaternion.Euler(0, -90, 0);
         speed = originalSpeed;
+        _animator = GetComponentInChildren<Animator>();
     }
 }

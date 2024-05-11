@@ -7,6 +7,7 @@ public class Boom : MonoBehaviour
     public Transform explosionParticle;
     public Building color;
     private bool isBuildingReady = false;
+    public float time;
 
     void Start()
     {
@@ -27,7 +28,7 @@ public class Boom : MonoBehaviour
     {
         if (color._renderer.material.color == color.colorMaterial)
         {
-            Explosion();
+            Invoke("Explosion", time);
         }
     }
 
