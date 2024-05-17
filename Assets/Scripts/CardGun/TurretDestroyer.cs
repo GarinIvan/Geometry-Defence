@@ -28,7 +28,7 @@ public class TurretDestroyer : MonoBehaviour
 
     void DestroyTurret()
     {
-        Instantiate(boom, transform.position, transform.rotation);
+        Instantiate(boom, transform.position, Quaternion.Euler(-90, 0, 0));
         Destroy(gameObject);
     }
 }

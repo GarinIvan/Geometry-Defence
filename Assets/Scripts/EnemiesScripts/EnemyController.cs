@@ -6,11 +6,10 @@ public class EnemyController : MonoBehaviour
     public float originalSpeed = 0.075f;
     private float speed;
     public float damage = 5;
-    public float reload;
     private Building _targetBuilding;
-    private Animator _animator;
+    private Base targetBase;
+    public Animator animator;
     private static readonly int IsAttack = Animator.StringToHash("isAttack");
-
     void Start()
     {
         StartEnemy();
@@ -27,8 +26,16 @@ public class EnemyController : MonoBehaviour
             if (building != null)
             {
                 _targetBuilding = building;
-                _animator.SetBool(IsAttack, true);
+                animator.SetBool(IsAttack, true);
                 speed = 0;
+            }
+        }
+        if (other.CompareTag("Base"))
+        {
+            Base _base = other.GetComponent<Base>();
+            if(_base != null)
+            {
+                _base.DestroyBase();
             }
         }
     }
@@ -41,7 +48,7 @@ public class EnemyController : MonoBehaviour
         else
         {
             _targetBuilding = null;
-            _animator.SetBool(IsAttack, false);
+            animator.SetBool(IsAttack, false);
             speed = originalSpeed;
         }
     }
@@ -53,6 +60,6 @@ public class EnemyController : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(0, -90, 0);
         speed = originalSpeed;
-        _animator = GetComponentInChildren<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 }

@@ -179,7 +179,7 @@ MonoBehaviour:
   _buildingSize: {x: 2, y: 2}
   _renderer: {fileID: 6408586390149214501}
   colorMaterial: {r: 0, g: 0, b: 0, a: 0}
-  health: 100
+  health: 200
 --- !u!54 &2342566362651540932
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -222,12 +222,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 3466947434925959099}
-  explosionPrefab: {fileID: 1563982142989843993, guid: c116b40c24f745d4288ec0167c788f0b,
+  explosionPrefab: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionParticle: {fileID: 3486403941732717894, guid: ac811804713c31846a66500c9fd43332,
     type: 3}
   color: {fileID: 628203188500762509}
-  time: 10
+  time: 15
 --- !u!1 &3259109423538260089
 GameObject:
   m_ObjectHideFlags: 0
