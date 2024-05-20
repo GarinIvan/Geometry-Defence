@@ -49,7 +49,7 @@ public class Bullet : MonoBehaviour
             enemyHealth.health -= damage;
             if (enemyHealth.health <= 0)
             {
-                Destroy(enemyHealth.gameObject);
+                enemyHealth.DestroyEnemy();
             }
         }
     }

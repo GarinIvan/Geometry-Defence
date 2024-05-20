@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 7968433912193841180, guid: e905bb3868804f24697e554dc5dede69, type: 3}
   cost: 10
+  timeToReload: 60
+  imageUI: {fileID: 21300000, guid: aafbe4eba326fc64587e3abd2caceae3, type: 3}

@@ -14337,6 +14337,7 @@ GameObject:
   - component: {fileID: 4593184484909914550}
   - component: {fileID: 4593184484909914553}
   - component: {fileID: 4593184484909914548}
+  - component: {fileID: 4744294745965491895}
   m_Layer: 0
   m_Name: CFXR2 WW Explosion
   m_TagString: Untagged
@@ -19343,6 +19344,19 @@ MonoBehaviour:
     perlinColor: 0
     perlinColorSpeed: 0
   fadeOutReference: {fileID: 0}
+--- !u!114 &4744294745965491895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4593184484909914552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da28755f9b75634f8236bc94a90dd5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 3
 --- !u!1 &4593184484999142886
 GameObject:
   m_ObjectHideFlags: 0
@@ -24196,9 +24210,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.6944641, g: 0.31747907, b: 0.051518075, a: 1}
-  m_Intensity: 4.0573616
-  m_Range: 9.636098
+  m_Color: {r: 0.559, g: 0.17468749, b: 0.05240625, a: 1}
+  m_Intensity: 0
+  m_Range: 4
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

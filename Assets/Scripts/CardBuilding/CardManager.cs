@@ -16,6 +16,8 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
     private bool _isAvailableToBuild;
     
     private GridController _gridController;
+    
+    public CardReload reloadScript;
 
     private void Awake()
     {
@@ -46,7 +48,7 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
                     _isAvailableToBuild = false;
                 else if (z < 0 || z > _gridSize.y - _building.BuildingSize.y)
                     _isAvailableToBuild = false;
-                else if(ValueCounter.value >= _cardSO.cost)
+                else if(ValueCounter.value >= _cardSO.cost && reloadScript.currentTime <= 0)
                     _isAvailableToBuild = true;
 
                 if (_isAvailableToBuild && IsPlaceTaken(x, z)) _isAvailableToBuild = false;
@@ -65,7 +67,6 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
         _draggingBuilding = Instantiate(_cardSO.prefab, Vector3.zero, Quaternion.identity);
             
         _building = _draggingBuilding.GetComponent<Building>();
-            
         var groundPlane = new Plane(Vector3.up, Vector3.zero);
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -81,7 +82,7 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (ValueCounter.value >= _cardSO.cost)
+        if (ValueCounter.value >= _cardSO.cost && reloadScript.currentTime <= 0)
         {
             if (_gridController == null)
             {
@@ -99,6 +100,7 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
                 _gridController.Grid[(int)_draggingBuilding.transform.position.x, (int)_draggingBuilding.transform.position.z] = _building;
                 _building.ResetColor();
                 ValueCounter.value -= _cardSO.cost;
+                reloadScript.SetTimeToReload(_cardSO.timeToReload);
             }
         }
         else

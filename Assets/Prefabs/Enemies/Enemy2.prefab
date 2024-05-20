@@ -60,6 +60,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  deathEffect: {fileID: 5515065002404772068, guid: b5c8ca7ed10b61e499cce8ec3b6e2e4c,
+    type: 3}
 --- !u!114 &-1984120497374636880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalSpeed: 0.5
   damage: 5
-  reload: 0.5
+  animator: {fileID: 0}
 --- !u!136 &7190909762907772568
 CapsuleCollider:
   m_ObjectHideFlags: 0
