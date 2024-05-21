@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bff1ea84bf64c844b9bc9d8fdd28f46a, type: 3}
-  m_Name: TriangleTurret
+  m_Name: 3Turret
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5289727577268939501, guid: 57d91d0d20a92994ba77b73a4cf548f0, type: 3}
-  cost: 15
-  timeToReload: 30
-  imageUI: {fileID: 21300000, guid: d4569e85a50cf8e43b1bb70f3cd9df1b, type: 3}
+  prefab: {fileID: 980917476421968674, guid: 019e276ca69d6d94ea0a6b718dd7296f, type: 3}
+  cost: 60
+  timeToReload: 20
+  imageUI: {fileID: 21300000, guid: c04df4da3a413ca40bc3d077be51c8e0, type: 3}
