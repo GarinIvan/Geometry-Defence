@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GunCard : MonoBehaviour
 {
@@ -10,6 +8,7 @@ public class GunCard : MonoBehaviour
     public Building color;
     public Bullet bulletPrefab;
     public Transform[] bulletSpawnPosition;
+    public AudioSource shotSound;
     private void FixedUpdate()
     {
         ShotFind();
@@ -38,6 +37,7 @@ public class GunCard : MonoBehaviour
                 {
                     timer = 0f;
                     Shot();
+                    shotSound.Play();
                 }
             }
         }

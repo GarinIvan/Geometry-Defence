@@ -5,6 +5,7 @@ public class Base : MonoBehaviour
 {
     public GameObject youWon;
     public ParticleSystem explosion;
+    public GameObject[] destroySound;
     public Animator mainCamera;
     public float increaseAmount = 10f;
     public float interval = 1f;
@@ -24,6 +25,10 @@ public class Base : MonoBehaviour
     {
         mainCamera.SetTrigger("Won");
         Instantiate(explosion, transform.position, Quaternion.identity);
+        for (int i = 0; i < destroySound.Length; i++)
+        {
+            Instantiate(destroySound[i]);
+        }
         Destroy(gameObject);
         youWon.SetActive(true);
     }

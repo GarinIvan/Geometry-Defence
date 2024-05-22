@@ -8,6 +8,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public GameObject dialogueBox;
     public GameObject waves;
+    public GameObject fon;
+    public Base baseSctipt;
     private Animator boxAnim;
     public Animator startAnim;
     private Queue<string> sentences;
@@ -56,5 +58,12 @@ public class DialogueManager : MonoBehaviour
     {
         boxAnim.SetTrigger("DialogueClose");
         waves.SetActive(true);
+        Invoke("RemoveDialodue", 1);
+        baseSctipt = baseSctipt.GetComponent<Base>();
+        baseSctipt.enabled = true;
+    }
+    public void RemoveDialodue()
+    {
+        fon.SetActive(false);
     }
 }

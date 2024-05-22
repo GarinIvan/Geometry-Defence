@@ -139,6 +139,11 @@ MonoBehaviour:
   youWon: {fileID: 0}
   explosion: {fileID: 4593184484909914550, guid: 2e1e9506f5904a64b81744324fb7cd50,
     type: 3}
+  destroySound:
+  - {fileID: 6207512131636823387, guid: 0864d5267bf43cb4ab9e779137f7471d, type: 3}
+  - {fileID: 551114357077031085, guid: b8d52255029d54a4db76a53ec6d00850, type: 3}
+  - {fileID: 8628346911151482892, guid: 3af72eba4699fdb479e829e8cab35ba8, type: 3}
+  - {fileID: 7774791250737389664, guid: d0a1f42c1e6ca1149b7d9b48291e763c, type: 3}
   mainCamera: {fileID: 0}
   increaseAmount: 1
   interval: 5

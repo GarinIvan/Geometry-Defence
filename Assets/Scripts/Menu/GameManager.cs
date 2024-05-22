@@ -36,22 +36,37 @@ public class GameManager : MonoBehaviour
 
     public void LVL2()
     {
-        SceneManager.LoadScene(2);
+        if (PlayerPrefs.GetInt("currentLevel") >= 2)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
     public void LVL3()
     {
-        SceneManager.LoadScene(3);
+        if (PlayerPrefs.GetInt("currentLevel") >= 2)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
     public void LVL4()
     {
-        SceneManager.LoadScene(4);
+        if (PlayerPrefs.GetInt("currentLevel") >= 2)
+        {
+            SceneManager.LoadScene(4);
+        }
     }
     public void LVL5()
     {
-        SceneManager.LoadScene(5);
+        if (PlayerPrefs.GetInt("currentLevel") >= 2)
+        {
+            SceneManager.LoadScene(5);
+        }
     }
     public void BOSS()
     {
-        SceneManager.LoadScene(6);
+        if (PlayerPrefs.GetInt("currentLevel") >= 2)
+        {
+            SceneManager.LoadScene(6);
+        }
     }
 }

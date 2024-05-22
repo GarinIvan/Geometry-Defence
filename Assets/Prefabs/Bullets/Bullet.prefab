@@ -4912,3 +4912,5 @@ MonoBehaviour:
   speed: 10
   lifeTime: 3
   boom: {fileID: 5880797563141009103, guid: 265d3a5ba69981a4698ceabcedf368b0, type: 3}
+  hitSound: {fileID: 3142259955671499983, guid: 075989ac5c29f614eacb5409d46c271f,
+    type: 3}

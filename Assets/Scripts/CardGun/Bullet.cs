@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
     public float lifeTime;
     private float damage = 10;
     public ParticleSystem boom;
+    public GameObject hitSound;
     private GameObject turret;
 
     private void Start()
@@ -33,18 +34,17 @@ public class Bullet : MonoBehaviour
         turret = newTurret;
         damage = turret.GetComponent<GunCard>().Damage;
     }
-
     private void DestroyFireball()
     {
         Instantiate(boom, transform.position, transform.rotation);
         Destroy(gameObject);
     }
-
     private void EnemyDamage(Collider other)
     {
         var enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         if (enemyHealth != null)
         {
+            Instantiate(hitSound);
             DestroyFireball();
             enemyHealth.health -= damage;
             if (enemyHealth.health <= 0)

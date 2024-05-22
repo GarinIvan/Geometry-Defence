@@ -7,6 +7,7 @@ public class TurretDestroyer : MonoBehaviour
     public float lifeTime;
     public ParticleSystem boom;
     public Building color;
+    public GameObject destroySound;
     private bool isBuildingReady = false;
     private void Start()
     {
@@ -29,6 +30,7 @@ public class TurretDestroyer : MonoBehaviour
     void DestroyTurret()
     {
         Instantiate(boom, transform.position, Quaternion.Euler(-90, 0, 0));
+        Instantiate(destroySound);
         Destroy(gameObject);
     }
 }

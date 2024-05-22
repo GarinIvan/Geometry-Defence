@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
@@ -9,6 +8,7 @@ public class EnemyController : MonoBehaviour
     private Building _targetBuilding;
     private Base targetBase;
     public Animator animator;
+    public AudioSource attackSound;
     private static readonly int IsAttack = Animator.StringToHash("isAttack");
     void Start()
     {
@@ -44,6 +44,7 @@ public class EnemyController : MonoBehaviour
         if (_targetBuilding != null)
         {
             _targetBuilding.TakeDamage(damage);
+            Instantiate(attackSound);
         }
         else
         {
