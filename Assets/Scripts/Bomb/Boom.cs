@@ -2,7 +2,6 @@
 
 public class Boom : MonoBehaviour
 {
-    public AudioSource collisionSound;
     public GameObject explosionPrefab;
     public Transform explosionParticle;
     public Building color;
@@ -12,7 +11,7 @@ public class Boom : MonoBehaviour
     void Start()
     {
         color = GetComponent<Building>();
-        color.SetColor(true); // Устанавливаем цвет заранее
+        color.SetColor(true);
         isBuildingReady = true;
     }
 

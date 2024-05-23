@@ -57,7 +57,10 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         boxAnim.SetTrigger("DialogueClose");
-        waves.SetActive(true);
+        if (waves != null)
+        {
+            waves.SetActive(true);
+        }
         Invoke("RemoveDialodue", 1);
         baseSctipt = baseSctipt.GetComponent<Base>();
         baseSctipt.enabled = true;

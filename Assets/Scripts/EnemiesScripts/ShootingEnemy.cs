@@ -3,7 +3,7 @@
 public class ShootingEnemy : MonoBehaviour
 {
     public EnemyBullet bulletPrefab;
-    public Transform bulletSpawnPosition;
+    public Transform[] bulletSpawnPosition;
     public float interval = 1f;
     public float damage;
     private float timer = 0f;
@@ -24,7 +24,10 @@ public class ShootingEnemy : MonoBehaviour
 
     private void Shot()
     {
-        EnemyBullet newEnemyBullet = Instantiate(bulletPrefab, bulletSpawnPosition.position, bulletSpawnPosition.rotation).GetComponent<EnemyBullet>();
-        newEnemyBullet.SetEnemy(gameObject);
+        for (int i = 0; i < bulletSpawnPosition.Length; i++)
+        {
+            EnemyBullet newEnemyBullet = Instantiate(bulletPrefab, bulletSpawnPosition[i].position, bulletSpawnPosition[i].rotation).GetComponent<EnemyBullet>();
+            newEnemyBullet.SetEnemy(gameObject);
+        }
     }
 }

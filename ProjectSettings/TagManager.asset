@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - NoResources
   - Base
+  - FxTemporaire
+  - FinalDialogue
   layers:
   - Default
   - TransparentFX
